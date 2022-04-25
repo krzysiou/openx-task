@@ -1,5 +1,3 @@
-//TYPES
-
 //type that defines tree structure
 export type Tree<TType> = {
   value: TType,

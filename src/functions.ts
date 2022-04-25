@@ -1,7 +1,5 @@
 import { Tree, TreeModified } from "./types"
 
-//FUNCTIONS
-
 //return number of nodes that do not have children
 export function numberOfLeaves<TType>(tree: TreeModified<TType>): number {
 
