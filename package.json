@@ -1,0 +1,23 @@
+{
+  "name": "openx-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tsc && node dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krzysiou/openx-task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krzysiou/openx-task/issues"
+  },
+  "homepage": "https://github.com/krzysiou/openx-task#readme",
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
+}
