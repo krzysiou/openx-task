@@ -1,5 +1,5 @@
-import { Tree } from "./types"
 import { areTreesEqual, numberOfLeaves, longestPathEdgeCount } from "./tree"
+import { Tree } from "./types"
 
 test('check if two trees are equal when values and structure are the same', () => {
   const tree1: Tree<number> = {
