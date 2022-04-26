@@ -1,7 +1,7 @@
-import { Tree, TreeModified } from "./types"
+import { Tree } from "./types"
 
 //return number of nodes that do not have children
-export function numberOfLeaves<TType>(tree: TreeModified<TType>): number {
+export function numberOfLeaves<TType>(tree: Tree<TType> | undefined): number {
   if(tree === undefined) return 0
   if(tree.left === undefined && tree.right === undefined) return 1
   return numberOfLeaves(tree.left) + numberOfLeaves(tree.right)
@@ -18,7 +18,7 @@ export function longestPathEdgeCount<TType>(tree: Tree<TType>): number {
 }
 
 //compare two trees
-export function areTreesEqual<TType>(tree1: TreeModified<TType>, tree2: TreeModified<TType>): boolean {
+export function areTreesEqual<TType>(tree1: Tree<TType> | undefined, tree2: Tree<TType> | undefined): boolean {
   if(tree1?.value !== tree2?.value) return false
   if(tree1 === undefined && tree2 === undefined) return true
   return areTreesEqual(tree1?.left, tree2?.left) && areTreesEqual(tree1?.right, tree2?.right)
