@@ -23,7 +23,6 @@
         "no-multi-spaces": ["warn", {}],
         "no-multiple-empty-lines": ["warn", { "max": 1 }],
         "brace-style": "warn",
-        "newline-before-return": "warn",
         "space-infix-ops": ["warn", { "int32Hint": false }],
         "no-console" : "warn",
         "object-curly-newline" : "warn"

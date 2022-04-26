@@ -1,5 +1,6 @@
 import { numberOfLeaves, longestPathEdgeCount, areTreesEqual, generateTree, Tree } from './tree'
 
+//numberOfLeaves tests
 describe('numberOfLeaves', () => {
     describe('performance', () => {
         it('checks if calling function on 5 level tree takes less than 0.5 milisecond', () => {
@@ -105,6 +106,7 @@ describe('numberOfLeaves', () => {
     })
 })
 
+//longestPathEdgeCount tests
 describe('longestPathEdgeCount', () => {
     describe('performance', () => {
         it('checks if calling function on 5 level tree takes less than 0.5 miliseconds', () => {
@@ -210,6 +212,7 @@ describe('longestPathEdgeCount', () => {
     })
 })
 
+//areTreesEqual tests
 describe('areTreesEqual', () => {
     describe('performance', () => {
         it('checks if comparing 5 level trees takes less than 0.5 milisecond', () => {
