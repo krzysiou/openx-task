@@ -1,6 +1,9 @@
 # openx-task
 A task during my OpenX recruitment process.
 
+## How to run
+First install npm using ```npm install```, then run tests using ```npm run test```.
+
 ## Technologies
 
 - Node.js
