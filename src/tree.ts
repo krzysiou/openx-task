@@ -5,37 +5,6 @@ export type Tree<TType> = {
   right?: Tree<TType>,
 }
 
-//generate tree of given height and random values (used for testing)
-export function generateTree(height: number): Tree<number> {
-    //inner recursive function that generates new nodes
-    function innerGeneration(height: number, node: Tree<number>): void {
-        //end recursion when height reaches 0
-        if(height == 0){
-            return
-        }
-        //set values of left child
-        node.left = {
-            value: Math.floor(Math.random() * 10)
-        }
-        //set values of right child
-        node.right = {
-            value: Math.floor(Math.random() * 10)
-        }
-        //recursive call on left child
-        innerGeneration(height - 1, node.left)
-        //recursive call on right child
-        innerGeneration(height - 1, node.right)
-    }
-    //create root
-    const root: Tree<number> = {
-        value: Math.floor(Math.random() * 10)
-    }
-    //begin generation
-    innerGeneration(height, root)
-    //return root node
-    return root
-}
-
 //return number of leaves
 export function numberOfLeaves<TType>(tree: Tree<TType>): number {
     //inner recursive function that checks if present node should be counted as a leaf
