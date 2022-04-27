@@ -36,29 +36,6 @@ function generateBinaryTree(numberOfLevels: number): BinaryTree<number> {
 }
 
 describe('numberOfLeaves', () => {
-  describe('performance', () => {
-    it('checks if calling function on a 5 level tree takes less than 0.5 milisecond', () => {
-      const tree: BinaryTree<number> = generateBinaryTree(5)
-      const start = performance.now()
-      numberOfLeaves(tree)
-      const finish = performance.now()
-      expect(finish - start).toBeLessThan(0.5)
-    })
-    it('checks if calling function on a 10 level tree takes less than 1 milisecond', () => {
-      const tree: BinaryTree<number> = generateBinaryTree(10)
-      const start = performance.now()
-      numberOfLeaves(tree)
-      const finish = performance.now()
-      expect(finish - start).toBeLessThan(1)
-    })
-    it('checks if calling function on a 20 level tree takes less than 100 miliseconds', () => {
-      const tree: BinaryTree<number> = generateBinaryTree(20)
-      const start = performance.now()
-      numberOfLeaves(tree)
-      const finish = performance.now()
-      expect(finish - start).toBeLessThan(100)
-    })
-  })
   describe('corectness', () => {
     it('checks if calling function on a tree with one node returns 1', () => {
       const tree: BinaryTree<number> = {
@@ -141,29 +118,6 @@ describe('numberOfLeaves', () => {
 })
 
 describe('longestPathEdgeCount', () => {
-  describe('performance', () => {
-    it('checks if calling function on a 5 level tree takes less than 0.5 miliseconds', () => {
-      const tree: BinaryTree<number> = generateBinaryTree(5)
-      const start = performance.now()
-      longestPathEdgeCount(tree)
-      const finish = performance.now()
-      expect(finish - start).toBeLessThan(0.5)
-    })
-    it('checks if calling function on a 10 level tree takes less than 1 milisecond', () => {
-      const tree: BinaryTree<number> = generateBinaryTree(10)
-      const start = performance.now()
-      longestPathEdgeCount(tree)
-      const finish = performance.now()
-      expect(finish - start).toBeLessThan(1)
-    })
-    it('checks if calling function on a 20 level tree takes less than 100 miliseconds', () => {
-      const tree: BinaryTree<number> = generateBinaryTree(20)
-      const start = performance.now()
-      longestPathEdgeCount(tree)
-      const finish = performance.now()
-      expect(finish - start).toBeLessThan(100)
-    })
-  })
   describe('corectness', () => {
     it('checks if calling function on a tree with one node returns 0', () => {
       const tree: BinaryTree<number> = {
@@ -246,33 +200,17 @@ describe('longestPathEdgeCount', () => {
 })
 
 describe('areTreesEqual', () => {
-  describe('performance', () => {
-    it('checks if comparing two 5 level trees takes less than 0.5 milisecond', () => {
-      const tree1: BinaryTree<number> = generateBinaryTree(5)
-      const tree2: BinaryTree<number> = generateBinaryTree(5)
-      const start = performance.now()
-      areTreesEqual(tree1, tree2)
-      const finish = performance.now()
-      expect(finish - start).toBeLessThan(0.5)
-    })
-    it('checks if comparing two 10 level trees takes less than 1 milisecond', () => {
-      const tree1: BinaryTree<number> = generateBinaryTree(10)
-      const tree2: BinaryTree<number> = generateBinaryTree(10)
-      const start = performance.now()
-      areTreesEqual(tree1, tree2)
-      const finish = performance.now()
-      expect(finish - start).toBeLessThan(1)
-    })
-    it('checks if comparing two 20 level trees takes less than 100 miliseconds', () => {
-      const tree1: BinaryTree<number> = generateBinaryTree(20)
-      const tree2: BinaryTree<number> = generateBinaryTree(20)
-      const start = performance.now()
-      areTreesEqual(tree1, tree2)
-      const finish = performance.now()
-      expect(finish - start).toBeLessThan(100)
-    })
-  })
   describe('corectness', () => {
+    it('checks if comparing trees with single node of the same value returns true', () => {
+      const tree1: BinaryTree<number> = {
+        value: 0,
+      }
+
+      const tree2: BinaryTree<number> = {
+        value: 0,
+      }
+      expect(areTreesEqual(tree1, tree2)).toBe(true)
+    })
     it('checks if comparing trees with different values on the first level returns false', () => {
       const tree1: BinaryTree<number> = {
         value: 0,
